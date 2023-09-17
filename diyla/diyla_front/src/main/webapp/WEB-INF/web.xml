@@ -1,0 +1,46 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+ <jsp-config>
+  <jsp-property-group>
+   <url-pattern>*.jsp</url-pattern>
+   <el-ignored>false</el-ignored>
+  </jsp-property-group>
+ </jsp-config>
+ <display-name>Archetype Created Web Application</display-name>
+ <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+ <filter>
+  <filter-name>loginFilter</filter-name>
+  <filter-class>com.cha102.diyla.front.filter.LoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>loginFilter</filter-name>
+  <url-pattern>/member/mem_update.jsp</url-pattern>
+  <url-pattern>/member/updatePw.jsp</url-pattern>
+  <url-pattern>/track/*</url-pattern>
+  <url-pattern>/allOrder/*</url-pattern>
+  <url-pattern>/token/*</url-pattern>
+  <url-pattern>/diybooking/diybooking.jsp</url-pattern>
+  <url-pattern>/art/addart.jsp</url-pattern>
+  <url-pattern>/art/editart.jsp</url-pattern>
+  <url-pattern>/art/personalart.jsp</url-pattern>
+  <url-pattern>/art/selectcoin.jsp</url-pattern>
+  <url-pattern>/art/oneart.jsp</url-pattern>
+  <url-pattern>/front_chat_page.jsp</url-pattern>
+  <url-pattern>/diyOrder/diyOrder_front.jsp</url-pattern>
+  <url-pattern>/diyOrder/diyOrder.jsp</url-pattern>
+  <url-pattern>/diyOrder/diyOrder_ByMemPeriod.jsp</url-pattern>
+  <url-pattern>/diyOrder/AllDeleteById.jsp</url-pattern>
+  <dispatcher>REQUEST</dispatcher>
+  <dispatcher>FORWARD</dispatcher>
+  <dispatcher>INCLUDE</dispatcher>
+  <dispatcher>ERROR</dispatcher>
+  <dispatcher>ASYNC</dispatcher>
+ </filter-mapping>
+ <listener>
+ <listener-class>com.cha102.diyla.sweetclass.classController.endClassRegisterTimer</listener-class>
+ </listener>
+</web-app>

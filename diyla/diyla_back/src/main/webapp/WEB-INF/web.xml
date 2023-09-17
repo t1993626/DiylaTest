@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+
+
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+    </jsp-property-group>
+  </jsp-config>
+  <filter>
+    <filter-name>BackLoginFilter</filter-name>
+    <filter-class>com.cha102.filter.BackLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>BackLoginFilter</filter-name>
+
+    <url-pattern>/aboutus/*</url-pattern>
+    <url-pattern>/art/*</url-pattern>
+    <url-pattern>/latestnews/*</url-pattern>
+    <url-pattern>/pbm/*</url-pattern>
+    <url-pattern>/shop/*</url-pattern>
+    <url-pattern>/diycate/*</url-pattern>
+    <url-pattern>/emp/insert.jsp</url-pattern>
+    <url-pattern>/emp/empShowAll.jsp</url-pattern>
+    <url-pattern>/mem/memShowAll.jsp</url-pattern>
+    <url-pattern>/emp/welcome.jsp</url-pattern>
+    <url-pattern>/chatPage.jsp</url-pattern>
+    <url-pattern>/back_diycate.jsp</url-pattern>
+    <url-pattern>/back_add_diycate.jsp</url-pattern>
+    <url-pattern>/back_edit_diycate.jsp</url-pattern>
+    <url-pattern>/diy_order/diyorderfront.jsp</url-pattern>
+    <url-pattern>/diy_order/getallorderlist_EL.jsp</url-pattern>
+    <url-pattern>/diy_order/getallorderlistByMemID.jsp</url-pattern>
+    <url-pattern>/diy_order/getAllStatusodByPeriod.jsp</url-pattern>
+    <url-pattern>/diy_order/getodByPeriod_front.jsp</url-pattern>
+    <url-pattern>/diy_order/getodListByPeriod.jsp</url-pattern>
+    <url-pattern>/diy_order/odlistbyID_EL.jsp</url-pattern>
+    <url-pattern>/diy_order/refund_verify.jsp</url-pattern>
+    <url-pattern>/diy_order/total.jsp</url-pattern>
+
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+    <dispatcher>ASYNC</dispatcher>
+  </filter-mapping>
+  <listener>
+ <listener-class>com.cha102.diyla.sweetclass.classController.endClassRegisterTimer</listener-class>
+ </listener>
+
+
+</web-app>
